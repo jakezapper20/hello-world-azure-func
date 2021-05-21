@@ -20,20 +20,20 @@ steps:
     pip3.6 install setuptools
     pip3.6 install -r requirements.txt
 
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'SonarQube'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'HelloWorldPythonApp'
-    cliProjectName: 'HelloWorldPythonApp'
-    cliSources: '.'
+#- task: SonarQubePrepare@4
+#  inputs:
+#    SonarQube: 'SonarQube'
+#    scannerMode: 'CLI'
+#    configMode: 'manual'
+#    cliProjectKey: 'HelloWorldPythonApp'
+#    cliProjectName: 'HelloWorldPythonApp'
+#    cliSources: '.'
   
-- task: SonarQubeAnalyze@4
+#- task: SonarQubeAnalyze@4
 
-- task: SonarQubePublish@4
-  inputs:
-    pollingTimeoutSec: '300'
+#- task: SonarQubePublish@4
+#  inputs:
+#    pollingTimeoutSec: '300'
 
 - task: ArchiveFiles@2
   inputs:
